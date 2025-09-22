@@ -10041,3 +10041,62 @@ a.text-dark:hover, a.text-dark:focus {
     border-radius: 12px;
     text-decoration: none;
 }
+.contactform {
+    max-width: 400px;
+    margin: 40px auto;
+    padding: 30px 25px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+    font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+.contactform label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: 500;
+    color: #333;
+}
+
+.contactform input[type="text"],
+.contactform input[type="email"],
+.contactform textarea {
+    width: 100%;
+    padding: 10px 12px;
+    margin-bottom: 18px;
+    border: 1px solid #d1d5db;
+    border-radius: 6px;
+    background: #f9fafb;
+    font-size: 1rem;
+    transition: border-color 0.2s;
+}
+
+.contactform input[type="text"]:focus,
+.contactform input[type="email"]:focus,
+.contactform textarea:focus {
+    border-color: #2563eb;
+    outline: none;
+    background: #fff;
+}
+
+.contactform textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+.contactform input[type="submit"] {
+    background: #2563eb;
+    color: #fff;
+    border: none;
+    padding: 12px 0;
+    width: 100%;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    
+}
+
+.contactform input[type="submit"]:hover {
+    background: #1e40af;
+}
