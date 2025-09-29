@@ -5,12 +5,15 @@
                 height="100">{{ __('introduction_texts.homepage_line_1') }}</p>
         <p>{{ __('introduction_texts.homepage_line_2') }}</p>
         <p>{{ __('introduction_texts.homepage_line_3') }}</p>
+
     </x-slot:introduction_text>
 
     <h1>
         <x-slot:title>
             {{ __('misc.all_brands') }}
         </x-slot:title>
+
+        <p>Hallo, {{ $name }} </p>
     </h1>
 
 
@@ -34,17 +37,17 @@
                             
                             if (!isset($header_first_letter) || (isset($header_first_letter) && $current_first_letter != $header_first_letter)) {
                                 echo '</ul>
-                            						<h2>' .
+                                                                                                                                                                                                                                                                                                                                                                            						<h2>' .
                                     $current_first_letter .
                                     '</h2>
-                            						<ul>';
+                                                                                                                                                                                                                                                                                                                                                                            						<ul>';
                             }
                             $header_first_letter = $current_first_letter;
                             ?>
 
                             <li>
-                                <a
-                                    href="/{{ $brand->id }}/{{ $brand->getNameUrlEncodedAttribute() }}/">{{ $brand->name }}</a>
+                                <a href="/{{ $brand->id }}/{{ $brand->getNameUrlEncodedAttribute() }}/"
+                                    class="brandslinks">{{ $brand->name }}</a>
                             </li>
                         @endforeach
                     </ul>
