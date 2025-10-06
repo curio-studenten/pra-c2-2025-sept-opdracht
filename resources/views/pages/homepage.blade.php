@@ -5,7 +5,6 @@
                 height="100">{{ __('introduction_texts.homepage_line_1') }}</p>
         <p>{{ __('introduction_texts.homepage_line_2') }}</p>
         <p>{{ __('introduction_texts.homepage_line_3') }}</p>
-
     </x-slot:introduction_text>
 
     <h1>
@@ -16,15 +15,21 @@
         <p>Hallo, {{ $name }} </p>
     </h1>
 
-
     <?php
     $size = count($brands);
     $columns = 3;
     $chunk_size = ceil($size / $columns);
+    $letters = range('A', 'Z');
     ?>
 
+    <div class="alphabet-menu mb-4 text-center">
+        @foreach ($letters as $letter)
+            <a href="#{{ $letter }}" class="mx-1">{{ $letter }}</a>
+        @endforeach
+    </div>
+
     <div class="container">
-        <!-- Example row of columns -->
+
         <div class="row">
 
             @foreach ($brands->chunk($chunk_size) as $chunk)
@@ -37,10 +42,11 @@
                             
                             if (!isset($header_first_letter) || (isset($header_first_letter) && $current_first_letter != $header_first_letter)) {
                                 echo '</ul>
-                                                                                                                                                                                                                                                                                                                                                                            						<h2>' .
+                                                                                                                                                                                                                                                                                                                                                                                                                  <h2 id="' .
                                     $current_first_letter .
-                                    '</h2>
-                                                                                                                                                                                                                                                                                                                                                                            						<ul>';
+                                    '">' .
+                                    $current_first_letter .
+                                    '</h2>                                                                                                                                                                                                                                                                                            <ul>';
                             }
                             $header_first_letter = $current_first_letter;
                             ?>
