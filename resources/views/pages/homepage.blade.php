@@ -42,7 +42,7 @@
                             
                             if (!isset($header_first_letter) || (isset($header_first_letter) && $current_first_letter != $header_first_letter)) {
                                 echo '</ul>
-                                                                                                                                                                                                                                                                                                                                                                                                                  <h2 id="' .
+                                                                                                                                                                                                                                                                                                                                                                                                                                              <h2 id="' .
                                     $current_first_letter .
                                     '">' .
                                     $current_first_letter .
