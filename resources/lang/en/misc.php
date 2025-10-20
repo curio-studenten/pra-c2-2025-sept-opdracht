@@ -14,14 +14,17 @@ return [
     */
 
     'home' => "Home",
+
+
     'home_alt' => "Download your manual homepage: Free user guides!",
     'homepage_title' => "Download your manual",
-    'copyright' => "Copyright 2017 Avarix",
+    'copyright' => "Copyright 2025 Avarix",
     'download_manual' => "Click here to download the manual",
     'download_manual_alt' => "Download your manual here",
     'view_manual' => "Directly view your manual",
     'view_manual_alt' => "Directly view your manual",
     'all_brands' => "All brands",
     'about_us' => "About us",
+
 
 ];
